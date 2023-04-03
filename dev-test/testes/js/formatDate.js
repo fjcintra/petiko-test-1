@@ -5,6 +5,8 @@
 
 function formatDate(userDate) {
   // format from M/D/YYYY to YYYYMMDD
+  let date = new String(userDate);
+  date.replace('/', '');
 }
 
 console.log(formatDate("12/31/2014"));
