@@ -6,5 +6,6 @@
 // em todos os outros casos, retorna falso.
 
 function removeProperty(obj, prop) {
+  $(obj).attr(prop)
   return null;
 }
