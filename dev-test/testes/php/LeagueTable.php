@@ -33,6 +33,7 @@ Portanto, o código acima deve exibir "Chris".
 
 class LeagueTable
 {
+    public $standings;
 	public function __construct($players)
     {
 		$this->standings = array();
@@ -55,7 +56,8 @@ class LeagueTable
 	
 	public function playerRank($rank)
     {
-        return NULL;
+        
+        return $this->standings[$rank];
 	}
 }
       
@@ -64,4 +66,6 @@ $table->recordResult('Mike', 2);
 $table->recordResult('Mike', 3);
 $table->recordResult('Arnold', 5);
 $table->recordResult('Chris', 5);
-echo $table->playerRank(1);
+// echo $table->playerRank(1);
+
+var_dump($table->standings);

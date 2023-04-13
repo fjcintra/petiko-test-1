@@ -19,8 +19,12 @@ class Palindrome
 {
     public static function isPalindrome($word)
     {
-        return NULL;
+        // if (strtoupper($word) == strtoupper(strrev($word)))
+        //     return true;
+        // else
+        //     return false;
+        return (strtoupper($word) == strtoupper(strrev($word)))?true:false; //utilizada uma forma mais simples de fazer a mesma verificação
     }
 }
 
-echo Palindrome::isPalindrome('Deleveled');
+var_dump(Palindrome::isPalindrome('asa'));

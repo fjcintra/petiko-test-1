@@ -15,7 +15,11 @@ class FileOwners
 {
     public static function groupByOwners($files)
     {
-        return NULL;
+        $newList = [];
+        foreach($files as $k => $v){
+            $newList[$v][] = $k;
+        }
+        return $newList;
     }
 }
 

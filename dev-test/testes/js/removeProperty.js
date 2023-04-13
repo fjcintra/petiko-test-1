@@ -6,6 +6,13 @@
 // em todos os outros casos, retorna falso.
 
 function removeProperty(obj, prop) {
-  $(obj).attr(prop)
-  return null;
+  if ($(obj).attr(prop)){
+    $(obj).removeAttr(prop)
+    return true
+  }
+  else 
+    return false
 }
+
+let r = removeProperty($("#el01"), "abaco")
+console.log(r)
